@@ -3,7 +3,8 @@ span#zoomed {
   top: 0;
   left: 0;
   margin: 0;
-  background: url('background.png');
+  background: #000; /* Fallback */
+  background: rgba(0, 0, 0, 0.65); 
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: bold;
   line-height: 1em;

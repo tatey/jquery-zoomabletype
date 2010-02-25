@@ -126,6 +126,13 @@
       Zoomable Type is completely unobtrusive. You only need to set a common class on the elements you care 
       about for them to become zoomable. Works great with the <a href="http://microformats.org/wiki/hcard">hCard microformat</a>.
     </p>
+    <p>
+      The plugin is compatible with all modern browsers, including IE7+. Browsers without CSS3 
+      support fallback to satisfactory defaults.
+    </p>
+    <div class="center">
+      <img src="http://cloud.github.com/downloads/tatey/jquery.zoomable_type/preview_ie.png" alt="" />
+    </div>
     <h2>Why?</h2>
     <p>I'm building a web application with many contact numbers.</p>
     <p>
@@ -147,13 +154,16 @@ My contact number is &lt;span class=&quot;zoomable&quot;&gt;(05) 3581 8761&lt;/s
 &lt;script src=&quot;jquery.zoomable_type.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;jquery.zoomable_type.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
 </pre>    
-    <p>Invoke Zoomable Type on DOM ready.</p>
+    <p>Invoke Zoomable Type on DOM ready and you're done!</p>
 <pre>
 jQuery(document).ready(function() {
   jQuery.zoomableType();
 });
 </pre>
-    <p>My contact number is <span class="zoomable">(05) 3581 8761</span></p>
+    <p>Optionally, bind to any elements.</p>
+<pre>
+jQuery.zoomableType('.telephone'); // Default is '.zoomable'
+</pre>
     <h2>Where?</h2>
     <div class="center">
       <a class="img" href="#"><img src="http://github.com/images/modules/download/zip.png" alt="Zip" /></a>
@@ -166,5 +176,13 @@ jQuery(document).ready(function() {
     <h2>Who?</h2>
     <p>Zoomable Type was created by <a href="http://tatey.com">Tate Johnson</a>.</p>
     <div><a href="http://github.com/tatey/jquery.zoomable_type/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a></div>
+    <script type="text/javascript">
+    document.write(unescape("%3Cscript src='http://www.google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-13217945-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
   </body>
 </html>

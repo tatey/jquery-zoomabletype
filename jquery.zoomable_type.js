@@ -59,6 +59,7 @@
       'padding': radius,
       '-moz-border-radius': radius,
       '-webkit-border-radius': radius,
+      'border-radius': radius,
       'text-shadow': '#000 2px 2px ' + parseFloat(element.css('fontSize')) * 0.01 + 'px'
     });
     element.css({

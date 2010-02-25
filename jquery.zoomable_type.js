@@ -16,18 +16,20 @@
   $.zoomableType = function(selector) {
     $(selector || '.zoomable').each(function() { $(this).click(onZoom); });
   };
+  var $zt = $.zoomableType;
   
   function onZoom() {
-    if ($('#zoomed').length > 0) {
+    if ($zt.zoomedElement) {
       onHide();
       return false; 
     }
-    var element = $('<span>', {id: 'zoomed'});
+    var element = $('<span>', {id: 'zoomed' + (+ new Date()), class: 'zoomed'});
     element.text($(this).text());
     element.appendTo('body');
     element.data.unzoomedWidth  = element.width();
     element.data.unzoomedHeight = element.height();
     setSizeAndPositionFor(element);
+    $zt.zoomedElement = element;
     $(document).click(onHide);
     $(window).resize(onWindowResize);
     return false;
@@ -36,11 +38,12 @@
   function onHide() {
     $(document).unbind('click', onHide);
     $(window).unbind('resize', onWindowResize);
-    $('#zoomed').remove();
+    $zt.zoomedElement.remove();
+    $zt.zoomedElement = null;
   }
   
   function onWindowResize() {
-    setSizeAndPositionFor($('#zoomed'));
+    setSizeAndPositionFor($zt.zoomedElement);
   }
   
   function setSizeAndPositionFor(element) {

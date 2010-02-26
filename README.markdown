@@ -2,7 +2,7 @@
 
 ## What?
 
-Zoomable Type is a jQuery plugin for reading small text on a display from far away. Text is upscaled to the largest size based on its width and the browser's viewpoint. [Try the live examples](http://zoomabletype.tatey.com/).
+Zoomable Type is a jQuery plugin for reading small text on a display from far away. Text is upscaled to the largest size based on its width and the browser's viewport. [Try the live examples](http://zoomabletype.tatey.com/).
 
 ![Preview](http://cloud.github.com/downloads/tatey/jquery.zoomable_type/preview.png)
 

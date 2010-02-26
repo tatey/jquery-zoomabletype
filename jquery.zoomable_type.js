@@ -1,6 +1,6 @@
 /*
 * Zoomable Type: Mac OS X's "Show in Large Type" for jQuery
-* @version 1.0.0
+* @version 1.0.1
 * @require jQuery >= v1.4.2 
 *
 * Zoomable Type is a jQuery plugin for reading small text on a
@@ -23,7 +23,7 @@
       onHide();
       return false; 
     }
-    var element = $('<span>', {id: 'zoomed' + (+ new Date()), class: 'zoomed'});
+    var element = $('<span>', {'id': 'zoomed' + (+ new Date()), 'class': 'zoomed'});
     element.text($(this).text());
     element.appendTo('body');
     element.data.unzoomedWidth  = element.width();

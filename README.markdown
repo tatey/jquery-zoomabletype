@@ -12,6 +12,8 @@ Zoomable Type is completely unobtrusive. You only need to set a common class on 
 
 The plugin is compatible with all modern browsers, including IE7+. Browsers without CSS3 support fallback to satisfactory defaults.
 
+Zoomable Type is intentionally disabled on the Apple iPhone to prevent conflicting with its native dialling functionality.
+
 ## Why?
 
 I'm building a web application with many contact numbers.

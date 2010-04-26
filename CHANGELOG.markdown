@@ -1,5 +1,11 @@
 # Changelog 
 
+## v1.0.3 / 2010-04-26
+  * Use jQuery selector instead of element ID or class.
+  * zoomableType() is chainable.
+  * zoomableType() accepts an optional argument to set CSS
+    class on zoomed element. Defaults to zoomed.
+
 ## v1.0.2 / 2010-03-16
   * Hide zoomed type on keydown.
   * Don't bind to elements on iPhone.

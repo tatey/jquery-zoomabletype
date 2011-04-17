@@ -89,7 +89,12 @@
       }
       
       span.zoomable {
+        cursor: pointer;
         border-bottom: 1px solid #000;
+      }
+      
+      dl > dt {
+        font-weight: bold;
       }
     </style>
   </head>
@@ -99,7 +104,7 @@
       <span>Mac OS X&rsquo;s &ldquo;Show in Large Type&rdquo; for jQuery</span>
     </h1>
     <div class="center">
-      <img src="http://cloud.github.com/downloads/tatey/zoomable_type.jquery/zoomed_preview.png" alt="" />
+      <img src="http://cloud.github.com/downloads/tatey/jquery-zoomabletype/zoomed_preview.png" alt="" />
     </div>
     <h2>What</h2>
     <p>
@@ -127,7 +132,7 @@
       support fallback to satisfactory defaults.
     </p>
     <div class="center">
-      <img src="http://cloud.github.com/downloads/tatey/zoomable_type.jquery/zoomed_preview_ie.png" alt="" />
+      <img src="http://cloud.github.com/downloads/tatey/jquery-zoomabletype/zoomed_preview_ie.png" alt="" />
     </div>
     <p>Zoomable Type is intentionally disabled on the Apple iPhone to prevent conflicting with its native dialling functionality.</p>
     <h2>Why?</h2>
@@ -145,36 +150,39 @@
     <p>Load jQuery, the plugin and the stylesheet.</p>
 <pre>
 &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;zoomable_type.jquery.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;zoomable_type.jquery.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
+&lt;script src=&quot;jquery.zoomabletype.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;jquery.zoomabletype.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
 </pre>    
     <p>Markup your zoomable elements.</p>
 <pre>
 My contact number is &lt;span class=&quot;zoomable&quot;&gt;(05) 3581 8761&lt;/span&gt;
 </pre>
-    <p>Invoke <code>zoomableType()</code> inside the DOM ready event and you're done!</p>
+    <p>Invoke <code>zoomabletype()</code> inside the DOM ready event and you're done!</p>
 <pre>
 jQuery(document).ready(function() {
-  jQuery('span.zoomable').zoomableType();
+  jQuery('.zoomable').zoomabletype();
 });  
 </pre>
     <h3>Options</h3>
-    <p><code>zoomableType()</code> accepts an optional argument to set the CSS class of the zoomed element. Defaults to <code>zoomed</code>.</p>
-<pre>
-jQuery('span.zoomable').zoomableType('enlarged');
-</pre>
+    <p><code>zoomabletype()</code> takes a number of options. You should pass these in as an object.</p>
+    <dl>
+      <dt>className</dt>
+      <dd>Name of the class given to the zoomed element. Defaults to zoomed.</dd>
+      <dt>textShadowColor</dt>
+      <dd>Colour of the text shadow. Defaults to black.</dd>
+    </dl>
     <h2>Where?</h2>
     <div class="center">
-      <a class="img" href="http://github.com/tatey/zoomable_type.jquery/zipball/v1.0.3"><img src="http://github.com/images/modules/download/zip.png" alt="Zipball" /></a>
-      <a class="img" href="http://github.com/tatey/zoomable_type.jquery/tarball/v1.0.3"><img src="http://github.com/images/modules/download/tar.png" alt="Tarball" /></a>
+      <a class="img" href="http://github.com/tatey/jquery-zoomabletype/zipball/v1.0.4"><img src="http://github.com/images/modules/download/zip.png" alt="Zipball" /></a>
+      <a class="img" href="http://github.com/tatey/jquery-zoomabletype/tarball/v1.0.4"><img src="http://github.com/images/modules/download/tar.png" alt="Tarball" /></a>
     </div>
     <p>      
-      The source resides on <a href="http://github.com/tatey/zoomable_type.jquery/">GitHub</a> and is 
+      The source resides on <a href="http://github.com/tatey/jquery-zoomabletype/">GitHub</a> and is 
       distributed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT licence</a>.
     </p>
     <h2>Who?</h2>
     <p>Zoomable Type was created by <a href="http://tatey.com">Tate Johnson</a>.</p>
-    <div><a href="http://github.com/tatey/zoomable_type.jquery/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a></div>
+    <div><a href="http://github.com/tatey/jquery-zoomabletype/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a></div>
     <script type="text/javascript">
     document.write(unescape("%3Cscript src='http://www.google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
     </script>

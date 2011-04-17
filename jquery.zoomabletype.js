@@ -94,6 +94,9 @@
   });
     
   $.fn.zoomabletype = function(options) {
-    return this.each(function() { new ZoomableType.Element(this, options); });
+    if (window.screen.width > 480) {
+      this.each(function() { new ZoomableType.Element(this, options); });
+    }
+    return this;
   }
 })(jQuery);

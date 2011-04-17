@@ -1,5 +1,9 @@
 # Changelog 
 
+## v1.0.4 / 2011-04-17
+  * Massive refactoring
+  * Disable on all mobile devices, not just iPhone
+
 ## v1.0.3 / 2010-04-26
   * Use jQuery selector instead of element ID or class.
   * zoomableType() is chainable.

@@ -36,7 +36,7 @@
 
   $.extend(ZoomableType.Element.prototype, {
     zoom: function() {
-      this.copy = $('<span>', {class: this.options.className})
+      this.copy = $('<span>', {'class': this.options.className})
         .text(this.original.text())
         .appendTo('body')
         .bind('click.zt', function(e) { e.stopPropagation(); });

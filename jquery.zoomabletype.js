@@ -61,8 +61,8 @@
     },
     
     resize: function() {
-      var width  = ZoomableType._win.width() * 90 / this.original.width(),
-          height = ZoomableType._win.height() * 90 / this.original.height();
+      var width  = ZoomableType._win.width() * 90 / this.copy.width(),
+          height = ZoomableType._win.height() * 90 / this.copy.height();
       
       this.copy.css('font-size', (width < height ? width : height) + '%');
       this._style()._center();
